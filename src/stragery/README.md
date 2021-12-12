@@ -83,3 +83,26 @@ class ExampleApplication is
         Print result.
 ```
 
+### Applicability
+
+- Sử dụng khi cần có nhiều thuật toán biến thể khác nhau trong một object:
+    + Mẫu Chiến lược cho phép bạn gián tiếp thay đổi hành vi của đối tượng trong thời gian chạy bằng cách liên kết nó với các đối tượng phụ khác nhau có thể thực hiện các nhiệm vụ phụ cụ thể theo những cách khác nhau.
+
+- Sử dụng Chiến lược khi bạn có nhiều lớp giống nhau chỉ khác nhau về cách chúng thực hiện một số hành vi.
+
+    + Mẫu Chiến lược cho phép bạn trích xuất các hành vi khác nhau thành một hệ thống phân cấp lớp riêng biệt và kết hợp các lớp ban đầu thành một, do đó giảm mã trùng lặp.
+
+- Sử dụng Chiến lược khi bạn có nhiều lớp giống nhau chỉ khác nhau về cách chúng thực hiện một số hành vi.
+
+### Pros and Cons
+
+- Pros: 
+    + Chuyển đổi dễ dàng giữa các thuật toán.
+    + Tách được phần thuật toán xử lý ra khỏi context object dễ bảo trì và thay đổi nó hơn
+    + Thay thế kế thừa bằng component
+    + Tuân thủ O trong SOLID ( Open/Closed Principle ).
+
+- Cons:
+    + Nếu có vài thuật toán mà chúng không thay đổi thì đừng cố tạo các interface sẽ khiến code thêm phần rắc rối nhưng phải lựa chọn và đánh đổi đôi khi bất kì sự lựa chọn nào cũng có mặt đúng sai.
+    + Vì khách hàng là người quyết định logic kinh doanh nên họ phải nhận thức được sự khác biệt
+    
